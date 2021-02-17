@@ -34,6 +34,7 @@ gradlePlugin {
     val whiteSource by plugins.creating {
         id = "garden.ephemeral.whitesource"
         implementationClass = "garden.ephemeral.gradle.plugins.whitesource.WhiteSourcePlugin"
+        displayName = "Gradle WhiteSource plugin"
     }
 }
 
@@ -42,10 +43,6 @@ pluginBundle {
     vcsUrl = "https://github.com/ephemeral-laboratories/whitesource-gradle-plugin"
     description = "Plugin to integrate the WhiteSource unified agent with Gradle"
     tags = setOf("whiteSource")
-
-    val whiteSourcePlugin by plugins.creating {
-        displayName = "Gradle WhiteSource plugin"
-    }
 }
 
 tasks.withType<Test> {

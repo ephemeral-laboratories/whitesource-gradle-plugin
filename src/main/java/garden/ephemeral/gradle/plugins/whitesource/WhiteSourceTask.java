@@ -1,5 +1,6 @@
 package garden.ephemeral.gradle.plugins.whitesource;
 
+import java.util.List;
 import javax.inject.Inject;
 
 import org.gradle.api.DefaultTask;
@@ -41,6 +42,7 @@ public class WhiteSourceTask extends DefaultTask {
     public void runWhiteSource() {
         JavaExecAction javaExecAction = getExecActionFactory().newJavaExecAction();
         javaExecAction.setClasspath(getWhiteSourceClassPath());
+        javaExecAction.setArgs(List.of(configurationFile.getAsFile().toString()));
         javaExecAction.execute();
     }
 
