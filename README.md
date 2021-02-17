@@ -8,7 +8,7 @@ A simple Gradle plugin to run WhiteSource.
 
     ```kotlin
     plugins {
-        id("garden.ephemeral.whitesource") version "0.1.0"
+        id("garden.ephemeral.whitesource") version "0.1.1"
     }
     ```
 
